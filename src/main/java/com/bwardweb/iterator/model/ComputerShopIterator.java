@@ -22,10 +22,7 @@ public class ComputerShopIterator implements Iterator{
 
 	@Override
 	public Object next() {
-		if(hasNext()){
-			return items.get(position++);
-		}
-		return null;
+		return items.get(position++);
 	}
 
 }

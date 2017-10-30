@@ -19,10 +19,7 @@ public class ApplianceShopIterator implements Iterator{
 
 	@Override
 	public Object next() {
-		if(hasNext()){
-			return items[position++];
-		}
-		return null;
+		return items[position++];
 	}
 
 }
