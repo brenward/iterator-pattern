@@ -2,14 +2,17 @@ package com.bwardweb.iterator.model;
 
 public class Brochure {
 	
-	ApplianceShop appliances;
+	private ApplianceShop appliances;
+	private ComputerShop computerShop;
 	
-	public Brochure(ApplianceShop appliances){
+	public Brochure(ApplianceShop appliances, ComputerShop computerShop){
 		this.appliances = appliances;
+		this.computerShop = computerShop;
 	}
 	
 	public void printBrochure(){
 		printBrochure(appliances.createIterator());
+		printBrochure(computerShop.createIterator());
 	}
 	
 	private void printBrochure(Iterator iterator){

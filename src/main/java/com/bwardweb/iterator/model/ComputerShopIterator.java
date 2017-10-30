@@ -1,16 +1,30 @@
 package com.bwardweb.iterator.model;
 
+import java.util.List;
+
 public class ComputerShopIterator implements Iterator{
+	
+	private int position;
+	private List<StockItem> items;
+	
+	public ComputerShopIterator(List<StockItem> items){
+		this.items = items;
+		position = 0;
+	}
 
 	@Override
 	public boolean hasNext() {
-		// TODO Auto-generated method stub
-		return false;
+		if(position >= items.size()){
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public Object next() {
-		// TODO Auto-generated method stub
+		if(hasNext()){
+			return items.get(position++);
+		}
 		return null;
 	}
 

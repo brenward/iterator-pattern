@@ -1,7 +1,7 @@
 package com.bwardweb.iterator.model;
 
 public class ApplianceShopIterator implements Iterator{
-	StockItem[] items;
+	private StockItem[] items;
 	private int position;
 	
 	public ApplianceShopIterator(StockItem[] items){
